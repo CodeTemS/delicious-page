@@ -1,0 +1,22 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section id="about" class="about">
+  <h2>{t('about.title')}</h2>
+  <p>{t('about.description')}</p>
+</section>
+
+<style>
+  .about {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+  }
+</style>

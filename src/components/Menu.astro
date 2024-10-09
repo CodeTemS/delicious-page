@@ -1,0 +1,83 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const menuSections = [
+  {
+    title: t('menu.appetizers'),
+    items: [
+      { name: 'Bruschetta', price: '$8' },
+      { name: 'Calamari', price: '$10' },
+      { name: 'Caprese Salad', price: '$9' },
+    ]
+  },
+  {
+    title: t('menu.mainCourses'),
+    items: [
+      { name: 'Grilled Salmon', price: '$22' },
+      { name: 'Beef Tenderloin', price: '$28' },
+      { name: 'Vegetarian Pasta', price: '$18' },
+    ]
+  },
+  {
+    title: t('menu.desserts'),
+    items: [
+      { name: 'Tiramisu', price: '$8' },
+      { name: 'Chocolate Mousse', price: '$7' },
+      { name: 'Fruit Tart', price: '$6' },
+    ]
+  }
+];
+---
+<section id="menu" class="menu">
+  <h2>{t('menu.title')}</h2>
+  {menuSections.map(section => (
+    <div class="menu-section">
+      <h3>{section.title}</h3>
+      <ul>
+        {section.items.map(item => (
+          <li>
+            <span class="dish">{item.name}</span>
+            <span class="price">{item.price}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</section>
+
+<style>
+  .menu {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+  }
+  .menu-section {
+    margin-bottom: 2rem;
+  }
+  h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-dark);
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  .dish {
+    font-weight: bold;
+  }
+  .price {
+    color: var(--accent-color);
+  }
+</style>
