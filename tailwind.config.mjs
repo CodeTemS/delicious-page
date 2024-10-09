@@ -6,6 +6,8 @@ export default {
       colors: {
         'accent': '#3498db',
         'accent-dark': '#2980b9',
+        'red' : '#bf0202',
+        'red-dark': '#8f0101'
       },
     },
   },
