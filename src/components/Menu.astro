@@ -8,25 +8,25 @@ const menuSections = [
   {
     title: t('menu.appetizers'),
     items: [
-      { name: 'Brochetas', price: '$100' },
+      { name: 'Brochetas', price: '$90' },
       { name: 'Guacamole', price: '$100' },
-      { name: 'Queso Fundido', price: '$100' },
+      { name: 'Queso Fundido', price: '$90' },
     ]
   },
   {
     title: t('menu.mainCourses'),
     items: [
-      { name: 'Arrachera', price: '$100' },
-      { name: 'Rib Eye', price: '$100' },
-      { name: 'Salmón al Horno', price: '$100' },
+      { name: 'Arrachera', price: '$320' },
+      { name: 'Rib Eye', price: '$300' },
+      { name: 'Salmón al Horno', price: '$210' },
     ]
   },
   {
     title: t('menu.desserts'),
     items: [
-      { name: 'Pay de Guayaba', price: '$100' },
-      { name: 'Flan', price: '$100' },
-      { name: 'Choco Flan', price: '$100' },
+      { name: 'Pay de Guayaba', price: '$45' },
+      { name: 'Flan', price: '$45' },
+      { name: 'Choco Flan', price: '$55' },
     ]
   }
 ];
@@ -50,20 +50,20 @@ const menuSections = [
 
 <style>
   .menu {
-    background-color: var(--bg-color);
     padding: 2rem;
     text-align: center;
   }
   h2 {
     margin-bottom: 2rem;
-    color: var(--accent-color);
+    color: var(--text-color);
+    font-size: x-large;
   }
   .menu-section {
     margin-bottom: 2rem;
   }
   h3 {
     margin-bottom: 1rem;
-    color: var(--accent-dark);
+    color: var(--text-color);
   }
   ul {
     list-style-type: none;
@@ -76,8 +76,9 @@ const menuSections = [
   }
   .dish {
     font-weight: bold;
+    color: var(--text-color)
   }
   .price {
-    color: var(--accent-color);
+    color: var(--text-color);
   }
 </style>

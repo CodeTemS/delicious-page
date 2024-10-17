@@ -1,15 +1,16 @@
 ---
 const images = [
-  '/img/img4.jpeg',
-  '/img/img5.jpeg',
-  '/img/img6.jpeg',
-  '/img/img7.jpeg'
+  'src/img/img3.jpeg',
+  'src/img/img4.jpeg',
+  'src/img/img5.jpeg',
+  'src/img/img6.jpeg',
+  'src/img/img7.jpeg',
 
 ];
 ---
 <div class="slider">
   {images.map((src, index) => (
-    <img src={src} alt={`Restaurant image ${index + 1}`} class={index === 0 ? 'active' : ''} />
+    <img src={src} alt={`Restaurant image ${index}`} class={index === 0 ? 'active' : ''} />
   ))}
 </div>
 

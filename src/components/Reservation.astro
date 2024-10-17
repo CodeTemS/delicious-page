@@ -1,31 +1,30 @@
 ---
 ---
 <section id="reservation" class="reservation">
-  <h2>Reserva una Mesa!</h2>
-  <form action="https://formsubmit.co/cristomontoya1722@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="New Reservation Request">
-    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+  <h2>¡Reserva una Mesa!</h2>
+  <form action="https://formsubmit.co/deliciousrestaurantbar2@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Una Nueva Reservación">
     <div class="form-group">
       <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="Nombre" required>
     </div>
     <div class="form-group">
       <label for="phone">Telefono:</label>
-      <input type="tel" id="phone" name="phone" required>
+      <input type="tel" id="phone" name="Telefono" required>
     </div>
     <div class="form-group">
       <label for="date">Fecha:</label>
-      <input type="date" id="date" name="date" required>
+      <input type="date" id="date" name="Fecha" required>
     </div>
     <div class="form-group">
       <label for="time">Hora:</label>
-      <input type="time" id="time" name="time" required>
+      <input type="time" id="time" name="Hora" required>
     </div>
     <div class="form-group">
       <label for="guests">Numero de Personas:</label>
-      <input type="number" id="guests" name="guests" min="1" max="20" required>
+      <input type="number" id="guests" name="Personas" min="1" max="20" required>
     </div>
-    <button type="submit">Reservar Ahora</button>
+    <button type="submit">¡Reserva Ahora!</button>
   </form>
 </section>
 
@@ -34,10 +33,12 @@
     background-color: var(--bg-color);
     padding: 2rem;
     text-align: center;
+    color: white;
+    
   }
   h2 {
     margin-bottom: 1rem;
-    color: var(--accent-color);
+    font-size: 24px;
   }
   form {
     display: flex;
@@ -58,10 +59,10 @@
     padding: 0.5rem;
     border: 1px solid var(--accent-color);
     border-radius: 4px;
+    color: rgb(43, 43, 43);
   }
-  button {
+  button{
     background-color: var(--accent-color);
-    color: white;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
